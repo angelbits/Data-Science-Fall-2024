@@ -1,0 +1,52 @@
+How do you assess the statistical significance of an insight?
+- You need a hypothesis (null hypothesis is the default assumption that there is no significant difference/effect of what is being measured/observed.)
+- Identify a test statistic, to assess how the data validates or rejects teh null hypothesis.
+- Obtain a p-value, " or probability value, is a number describing the likelihood of obtaining the observed data under the null hypothesis of a statistical test." 
+    - https://www.investopedia.com/terms/p/p-value.asp
+- Need a significance level (alpha, arbitrary, but usually .05) to decide whether to reject/accept the null hypothesis.
+  - if p-value is less than the significance level, reject the null and conclude that result is statistically significant.
+
+What is the Central Limit Theorem? Explain it. Why is it important?
+- "In probability theory, the central limit theorem (CLT) states that the distribution of a sample will approximate a normal distribution (i.e., a bell curve) as the sample size becomes 
+  larger, regardless of the population's actual distribution shape. Put another way, CLT is a statistical premise that, given a sufficiently large sample size from a population 
+  with a finite level of variance, the mean of all sampled variables from the same population will be approximately equal to the mean of the whole population. Furthermore, these 
+  samples will approximate a normal distribution, with their variances being approximately equal to the variance of the population as the sample size gets larger, according to the 
+  law of large numbers." https://www.investopedia.com/terms/c/central_limit_theorem.asp
+- It is important because the CLT allows for normal approximation of many statistical distributions. It is the basis for statistical tests (z, t). Helps derive confidence intervals 
+  from the population paramters. And helps understand behavior of sampling distributions, means, etc.
+
+What is the statistical power?
+- "Statistical power, or sensitivity, is the likelihood of a significance test detecting an effect when there actually is one. A true effect is a real, non-zero relationship 
+  between variables in a population. An effect is usually indicated by a real difference between groups or a correlation between variables. High power in a study indicates a 
+  large chance of a test detecting a true effect. Low power means that your test only has a small chance of detecting a true effect or that the results are likely to be distorted 
+  by random and systematic error. Power is mainly influenced by sample size, effect size, and significance level. A power analysis can be used to determine the necessary sample 
+  size for a study." https://www.scribbr.com/statistics/statistical-power/
+  - Factors that impact statistical power include: effect size (larger increases power), sample size (larger increases power), significance level (lower decreases power), standard
+  deviation (smaller increases power).
+- Type I error (reject a null hypothesis that is true) and Type II errors (fail to reject a null hypothesis that is false) - https://www.ncbi.nlm.nih.gov/books/NBK557530/
+
+
+How do you control for biases?
+- Data:
+  - Avoid selection bias: Ensure data sample is representative of the target population.
+  - Data Quality: Clean data from errors, nulls, inconsistencies, etc, and use appropriate feature engineering to minize bias.
+- Model selection/evaluation:
+  - Use fairness metrics to evaluate models.
+  - Prevent overfitting of model.
+
+
+What are confounding variables?
+- "A confounder is a variable that influences both the dependent variable and independent variable, causing a spurious association". https://en.wikipedia.org/wiki/Confounding
+- "A confounding variable is an extraneous variable that is not appropriately controlled in a study, which can result in it being unequally present in the comparison groups. 
+  This variable can potentially influence the outcome of the study and obscure the true relationship between the independent variable and the dependent variable." 
+  https://www.sciencedirect.com/topics/nursing-and-health-professions/confounding-variable
+
+What is A/B testing?
+- Comparing the control group (A) against a test group (B) to assess whether a variable had an observable impact on the results.
+- The null hypothesis would be that there is no difference between groups A and B. The alternative hypothesis would state that there is a difference. 
+- The test statistic could be a z-test or t-test.
+- if p-value is less than the significance level (.05), we determine that the difference is statistically significant and reject the null hypothesis. 
+
+What are confidence intervals?
+- These is a "range of values, bounded above and below the statistic's mean, that likely would contain an unknown population parameter". https://www.investopedia.com/terms/c/confidenceinterval.asp
+  - A smaller confidence interval indicates higher precision.
